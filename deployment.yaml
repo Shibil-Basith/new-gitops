@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: sample-container
-          image: saiappan/admin:v1
+          image: saiappan/frontend:v1
           ports:
             - containerPort: 80
