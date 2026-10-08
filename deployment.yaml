@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  namespace: new-gitops-ns
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: sample
+  template:
+    metadata:
+      labels:
+        app: sample
+    spec:
+      containers:
+        - name: sample-container
+          image: saiappan/frontend:v1
+          ports:
+            - containerPort: 80
